@@ -1,0 +1,52 @@
+{
+  "name": "isomorphic",
+  "version": "0.0.0",
+  "description": "Sample isomorphic app",
+  "private": true,
+  "scripts": {
+    "start": "node server.dist.js",
+    "test": "mocha --compilers js:babel-register",
+    "build": "babel server.js --out-file server.dist.js",
+    "watch:server": "nodemon server.js --exec babel-node --presets es2015,react",
+    "watch:app": "webpack --progress --colors --watch",
+    "watch": "npm run watch:server & npm run watch:app",
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jankosacc/isomorphic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jankosacc/isomorphic/issues"
+  },
+  "homepage": "https://github.com/jankosacc/isomorphic#readme",
+  "author": "Janis Koselevs <janis.koselevs@accenture.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.7.1",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1",
+    "serve-favicon": "^2.3.0"
+  }
+}
